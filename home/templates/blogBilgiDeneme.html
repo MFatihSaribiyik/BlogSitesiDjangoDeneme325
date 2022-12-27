@@ -1,0 +1,42 @@
+{% extends 'homebase.html' %}
+{% load static %}
+{% block title %}
+    {{ seting.title }}
+{% endblock %}
+
+{% block blogMain %}
+ <!-- fist section -->
+
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="our_two_box">
+                     <div class="row d_flex">
+
+                           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                           <div class="our_img">
+                              <figure><img src={% static 'images/our_img1.jpg' %} alt="#"/></figure>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                           <div class="our_text_box">
+                              <h3 class="awesome pa_wi">The biggest and most awesome Photo of  year</h3>
+                              <p>{{ setting.adress }} </p>
+                              <div class="post_box padding_bottom1">
+                                 <h4 class="flot_left1">Post By : {{ setting.title }} </h4>
+                                 <ul class="like">
+                                     <li><a href="#"><img src={% static 'images/like.png' %} alt="#"/>Like</a></li>
+                                     <li><a href="#"><img src={% static 'images/comm.png' %} alt="#"/>Comment</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+    <!-- end fist section -->
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sayfa Kurulum</title>
+</head>
+<body>
+<h1>Başlangıç için ilk video özet</h1>
+<p> #açtık
+#runserver baktık çalısıyor
+#$ python manage.py startapp polls --- aplication oluşturuyoz pools yerine dosya adını yazcan homeyi ekledik
+#proje settingte gorunur hale gelsin mysite urls path polls kısmını al ana urls kısmına -- path('polls/', include('polls.urls')),--yapıştır
+#içine pools yerine dosya ismi yaz import et iclude yi yani sonra home de urls dosyası yok oraya yeni dosya aç
+#part 2 de setting . py kısmını pools config kısmını al ekle
+# 'polls.apps.PollsConfig',
+#bunu djongoprojeckteki ana dosyaya crtl crl v yapcan
+#bizim açtığımız urlde olası gerekenler part 3 te bulduk ilkini kulland iğerlerini yorum satırı yap
+#from django.urls import path
+
+#from . import views
+
+#urlpatterns = [
+    # ex: /polls/
+ #   path('', views.index, name='index'),
+    # ex: /polls/5/
+ #   path('<int:question_id>/', views.detail, name='detail'),
+#    # ex: /polls/5/results/
+#    path('<int:question_id>/results/', views.results, name='results'),
+#    # ex: /polls/5/vote/
+#    path('<int:question_id>/vote/', views.vote, name='vote'),
+#]
+
+
+#views . pyey bunu yazcan
+#tex="merabalaraq
+#return HttpResponse("You're looking at question %s." % question_id)
+#içineden yoksa template at bende template hazır var geldi
+#templatede index açıp içine yazı ayzdık bunu da django gormesi için sayfa açıyoz
+#part 3 ten renderi bul son 2 starırı al retrun var içinde  bir de context
+#text="merabalar aq dan" return kısmını sil kopyaladığın kısımı yapıştır
+#   context = {'text': text}
+#    return render(request, 'index.html', context)
+#texte değiştimiz her şey yani wiew bir şey yazarsam gozukmesi için indexe bu dosyayı yazcam {{ text }}
+#html taglarını yok etmek içinde {{ text | raw }}</p>
+
+
+</body>
+</html>

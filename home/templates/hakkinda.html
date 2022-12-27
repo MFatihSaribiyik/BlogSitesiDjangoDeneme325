@@ -1,0 +1,42 @@
+{% extends "homebase.html" %}
+{% load static %}
+{% block title %} setting title->{{ settings.title }}  {% endblock %}
+{% block description %} {{ setting.description}} {% endblock %}
+{% block keywords %} {{ setting.keyword }} {% endblock    %}
+
+{% block blogMain %}
+<!-- fist section -->
+            <div class="row">
+
+               <div class="col-md-12">
+                  <div class="our_two_box">
+                     <div class="row d_flex">
+
+                           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                           <div class="our_img">
+                              <figure><img src={{ settings.icon.url }} alt="#"/></figure>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                           <div class="our_text_box">
+
+                              <h3 class="awesome pa_wi"> ben:{{ settings.company }}</h3>
+
+                              <p>{{ settings.adress }}  </p>
+                              <div class="post_box padding_bottom1">
+                                 <h4 class="flot_left1">numaram: {{ settings.phone }} </h4> <br>
+                                  <h5 class="flot_left1">Gmail: {{ settings.email }} </h5> <br>
+                                  <h6 class="flot_left1">Özgeçmiş: {{ settings.description }} </h6>
+                                 <ul class="like">
+                                    <li><a href="#"><img src={% static 'images/like.png' %} alt="#"/>Like</a></li>
+                                     <li><a href="#"><img src={% static 'images/comm.png' %} alt="#"/>Comment</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+    <!-- end fist section -->
+{% endblock %}

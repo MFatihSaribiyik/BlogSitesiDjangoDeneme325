@@ -1,0 +1,104 @@
+{% extends "homebase.html" %}
+{% load static %}
+
+{% block title %} index title->{{ setting.title }}  {% endblock %}
+{% block description %} index sayfası {% endblock %}
+{% block keywords %} index sayfası anahtar kelimeleri {% endblock    %}
+
+{% block banner %}{% endblock %}
+ {% block head%}
+        <link rel="shortcut icon" type="image/x-icon" href='{{ setting.icon.url }}'/> <!--icon ekleme olmadi-->
+ {% endblock %}
+
+{%  block contack %}
+    {% include "contack.html"%}
+{%endblock%}
+{% block hakkinda %}
+
+{% endblock %}
+
+
+
+{% block blogMain %}<!-- fist section -->
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="our_two_box">
+                     <div class="row d_flex">
+
+                           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                           <div class="our_img">
+
+                              <figure><a href="blogBilgiDeneme/"><img src={% static 'images/our_img1.jpg' %} alt="#"/></a> </figure>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                           <div class="our_text_box">
+                              <h3 class="awesome pa_wi">Sadece bu fotoda link var<-->{{ setting.title }}</h3>
+                              <p>{{setting.adress}}</p>
+                              <div class="post_box padding_bottom1">
+                                 <h4 class="flot_left1">Post By : Blogger-->{{setting.email}} </h4>
+                                 <ul class="like">
+                                    <li><a href="#"><img src={% static 'images/like.png' %} alt="#"/>Like</a></li>
+                                     <li><a href="#"><img src={% static 'images/comm.png' %} alt="#"/>Comment</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+    <!-- end fist section -->
+    <!-- three section -->
+                     <div class="row">
+                         <div class="col-md-6 padding_bottom2">
+                           <div class="our_img">
+                              <figure><a href="#"> <img href="#" src={% static 'images/our_img3.jpg' %} alt="#"/></a> </figure>
+                           </div>
+                           <div class="our_text_box three_box">
+
+
+                              <div class="post_box d_flex padding_top3">
+                                 <h3 class="awesome padding_flot">{{ setting.title }}</h3>
+                                 <h4 class="flot_left1">{{ setting.email }}</h4>
+                                 <ul class="like padding_left2">
+                                    <li><a href="#"><img src={% static 'images/like.png' %} alt="#"/>Like</a></li>
+                                     <li><a href="#"><img src={% static 'images/comm.png' %} alt="#"/>Comment</a></li>
+                                 </ul>
+                              </div>
+                              <p>{{ setting.adress}}</p>
+                           </div>
+                        </div>  <!--dene for ile döndür fazla bi div var burda-->
+                        <div class="col-md-6">
+                           <div class="our_img">
+                              <figure><a href="#"><img src={% static 'images/our_img4.jpg' %} alt="#"/></a></figure>
+                           </div>
+                           <div class="our_text_box three_box">
+
+
+                              <div class="post_box d_flex padding_top3">
+                                  <h3 class="awesome padding_flot">{{ setting.title }}<-->Amezing  Place</h3>
+                                 <h4 class="flot_left1">Post By : {{ setting.email }} </h4>
+                                 <ul class="like padding_left2">
+                                    <li><a href="#"><img src={% static 'images/like.png' %} alt="#"/>Like</a></li>
+                                     <li><a href="#"><img src={% static 'images/comm.png' %} alt="#"/>Comment</a></li>
+                                 </ul>
+                              </div>
+                              <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimquis nostrud exercitation ullamco laboris </p>
+                           </div>
+                        </div>
+                     </div>
+
+
+    <!-- end three section -->
+{% endblock %}
+{% block footer %}{% endblock %}
+{% block header %}{% endblock %}
+{% block testimonial %}{% include 'testimonial.html' %} {% endblock %} <!--gereksiz dosya çağırımı ??kaç tane-->
+
+
+
+
+
+
+

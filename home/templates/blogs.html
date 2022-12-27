@@ -1,0 +1,64 @@
+{% extends 'homebase.html' %}
+{% load static %}
+{% block title %}
+    blog->{{ category.id }}
+{% endblock %}
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+{% block blogMain %}
+    
+
+
+
+
+    <!-- fist section -->
+    {% for i in blog %}
+
+
+
+
+
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="our_two_box">
+                     <div class="row d_flex">
+
+                           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                           <div class="our_img">
+                              <figure><a href="#"><img src={{i.image.url}} alt="#"/></a> </figure>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                           <div class="our_text_box">
+                                {% for b in selectedCategory %}
+                                <h2 class="awesome pa_wi">Kategori türü:{{ b.title }}</h2>
+                                {% endfor %}
+                                 <h3 class="flot_left1">Başlık:{{i.title }}: </h3> <br> <br>
+                              <p>{{ i.detail }}  </p>
+                              <div class="post_box padding_bottom1">
+
+                                 <h4 class="flot_left1">{{i.description }} </h4> <br>
+                                  <h5 class="flot_left1">   Blogun Fiyatı :{{i.price }} TL </h5>
+
+                                 <ul class="like">
+                                     <li><a href="#"><img src={% static 'images/like.png' %} alt="#"/>Like</a></li>
+                                     <li><a href="#"><img src={% static 'images/comm.png' %} alt="#"/>Comment</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+    {% endfor %}
+    <!-- end fist section -->
+
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}
